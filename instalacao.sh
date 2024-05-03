@@ -103,7 +103,7 @@ chown -R userwinner:www-data /Videos
 echo adicionando script de autostart autostart
 
 sed -i '$ d' /etc/rc.local
-echo "python /opt/scarepi/bin/teste.py  &" >> /etc/rc.local
+echo "python /opt/userwinner/bin/teste.py  &" >> /etc/rc.local
 echo "exit 0" >> /etc/rc.local
 echo
 echo

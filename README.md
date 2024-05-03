@@ -6,8 +6,12 @@
 
 O código foi desenvolvido de uma maneira que de momento não vejo que esteja bom, preciso refatorar muitos pontos que de fato não estão escrito da melhor maneira.... mas de momento ele esta rodando da forma que esperamos para executar a tarefa desejada. Como durante o processo de teste de qual linguagem rodaria e pelo fato de pouco tempo que tinhamos para o desenvolvimento foi definido que Python seria a melhor linguagem para reduzir o tempo de desenvolvimento e estivesse pronto dentro do tempo esperado.
 
-## Inicio do projeto
-O projeto foi iniciado
+## Código
+Levando em consideração o pouco tempo que tinhamos para desenvolver o projeto acabei definindo em desenvolver com base em Python para executar os videos e controlar o sensor de proximidade. Visto que era necessário que o projeto pudesse estar preparado para caso ele fosse reiniciado e de facil inicialização fiz alguns ajustes no Raspibian para que ele não mostrasse nada na tela de inicio, iniciasse automatimente o projeto e ficasse pronto para detectar a primeira pessoa ao passar em frente.
+Durante o desenvolvimento percebi a necessidade de colocar um servidor Samba para que facilitasse a transferencia dos arquivos, e neste momento do código só foi implementado as coisas simples mas seria ideal criar um painel ADM para que pudesse transferir os arquivos de maneira mais amigavel e até controle do projeto pelo painel.
+
+Em questão de bibliotecas foi usado: Python3, Samba, pigpio, vlc, python-vlc.
+
 
 
 ### Montando o quadro
