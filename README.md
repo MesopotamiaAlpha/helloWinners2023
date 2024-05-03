@@ -1,3 +1,5 @@
+![alt text](image.png)
+
 # Projeto HelloWinners 2023
  Este projeto foi desenvolvido para uma festa de haloween. 
  A inspiração veio apartir deste video (https://www.youtube.com/watch?v=d2Ej5HOMNPk) e apartir deste ponto decidimos que iriamos fazer igual, mas durante todo o processo de pesquisa não cheguei a encontrar um repositório que ja teria um projeto desenvolvido ou ao menos alguma parte.
