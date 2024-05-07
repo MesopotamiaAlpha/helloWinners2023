@@ -1,5 +1,10 @@
 body {
+  display: flex;
+	text-align: center;
+	font-size: 1.5em;
+  flex-grow: 1;
   margin: 0;
+  background-image: url("/server/hellowinnersfront/img/fundofaq.jpg");
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +15,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.quadroExecutar {
+  background-color: black;
+  margin-top: 20px;
+}
+
+
+.quadroUpar{
+  background-color: aqua;
+  margin-top: 20px;
 }

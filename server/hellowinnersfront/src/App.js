@@ -13,7 +13,20 @@ const App = () => {
 
   return (
     <div>
-      <button onClick={executarScript}>Executar Script</button>
+      <section className='quadroExecutar'>
+        <button onClick={executarScript}>Executar Script</button>
+      </section>
+
+      <section className='quadroUpar'>
+        <input type="file" id="fileUploaded"/>
+        <button onClick={executarScript}>Upar video</button>
+      </section>
+
+      <section className='quadroUpar'>
+        <button onClick={executarScript}>Apagar video</button>
+      </section>
+
+
     </div>
   );
 };
