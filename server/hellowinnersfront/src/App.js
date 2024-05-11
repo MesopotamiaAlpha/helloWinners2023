@@ -32,25 +32,37 @@ const App = () => {
     }
   };
 
+  const apagarScript = async () => {
+    try {
+      const response = await axios.post('http://localhost:3001/apagar');
+      setScriptResult(response.data); // Define a mensagem de resultado do script
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div>
       <img src={logo} alt="Logo HelloWinners" />
       <section className='quadroGeral'>
-        <a>Painel de controle do projeto</a>
+        <p>Painel de controle do projeto</p>
+        <section className='quadroListar'>
+          <p>Campo para listar todos os arquivos no projeto</p>
+        </section>
         <section className='quadroUpar'>
           <input type="file" id="uploadInput" onChange={handleFileChange} />
-          <button onClick={handleUpload}>Upar video</button>
           <p>Tamanho do arquivo: {bytesToMegabytes(fileSize)} MB</p>
           <progress value={uploadProgress} max="100"></progress>
           <p>Progresso: {uploadProgress}% concluído</p>
           <p>Velocidade de upload: {uploadSpeed} KB/s</p>
+          <button onClick={handleUpload}>Upar video</button>
         </section>
         <section className='quadroExecutar'>
           <button onClick={executarScript}>Executar Script</button>
           {scriptResult && <p>{scriptResult}</p>} {/* Mostra a mensagem de resultado do script */}
         </section>
         <section className='quadroApagarVideo'>
-          <button onClick={executarScript}>Apagar video</button>
+          <button onClick={apagarScript}>Apagar video</button>
         </section>
         <section className='quadroEditar'>
           <button onClick={executarScript}>Editar o video</button>

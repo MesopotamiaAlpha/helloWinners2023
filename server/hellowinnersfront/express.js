@@ -2,13 +2,14 @@ const express = require('express');
 const app = express();
 const cors = require("cors");
 const multer = require('multer');
+const { stdout, stderr } = require('process');
 
 app.use(cors());
 
 // Configuração do Multer para armazenar os arquivos no diretório 'uploads'
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, '/home/teste/helloWinners2023/videos'); // Especifique o diretório de destino dos arquivos
+    cb(null, '../../videos'); // Especifique o diretório de destino dos arquivos
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname); // Use o nome original do arquivo
@@ -49,6 +50,28 @@ app.post('/executar-script', (req, res) => {
     res.send('Arquivo JavaScript executado com sucesso.');
   });
 });
+
+//apagar arquivo
+app.post('/apagar', (req, res) => {
+  const { exec } = require('child_process');
+
+  exec('node src/js/apagar.js', (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Erro ao executar o arquivo JavaScript: ${error.message}`);
+      res.status(500).send('Erro ao executar o arquivo JavaScript.');
+      return;
+    }
+    if (stderr) {
+      console.error(`Erro de execução do arquivo JavaScript: ${stderr}`);
+      res.status(500).send('Erro de execução do arquivo JavaScript.');
+      return;
+    }
+    console.log(`Arquivo JavaScript executado com sucesso: ${stdout}`);
+    res.send('Arquivo JavaScript executado com sucesso.');
+  });
+});
+
+
 
 app.listen(3001, () => {
   console.log('Servidor rodando na porta 3001');
