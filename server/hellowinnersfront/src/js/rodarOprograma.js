@@ -1,6 +1,6 @@
 const { exec } = require('child_process');
 
-exec('python3 /home/teste/helloWinners2023/teste.py', (error, stdout, stderr) => {
+exec('python3 ../../teste.py', (error, stdout, stderr) => {
   if (error) {
     console.error(`Erro ao executar o script Python: ${error.message}`);
     return;

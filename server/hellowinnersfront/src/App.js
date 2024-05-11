@@ -25,7 +25,7 @@ const App = () => {
 
   const executarScript = async () => {
     try {
-      const response = await axios.post('http://192.168.1.108:3001/executar-script');
+      const response = await axios.post('http://localhost:3001/executar-script');
       setScriptResult(response.data); // Define a mensagem de resultado do script
     } catch (error) {
       console.error(error);

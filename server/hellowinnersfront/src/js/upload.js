@@ -23,7 +23,7 @@ const uploadFile = async (selectedFile, setUploadProgress, setUploadSpeed) => {
       }
     };
 
-    const response = await axios.post('http://192.168.1.108:3001/upar', formData, config);
+    const response = await axios.post('http://localhost:3001/upar', formData, config);
 
     console.log(response.data);
   } catch (error) {
