@@ -1,9 +1,15 @@
 import axios from 'axios';
 
+let variavel;
+
 const uploadFile = async (selectedFile, setUploadProgress, setUploadSpeed) => {
   try {
     let formData = new FormData();
     formData.append('file', selectedFile);
+    // tentando capturar o nome do arquivo sendo enviado
+    selectedFile = variavel;
+    console.log (variavel);
+    console.log("dentro do upload");
 
     const startTime = new Date().getTime(); // Captura o tempo inicial
 

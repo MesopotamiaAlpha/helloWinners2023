@@ -3,6 +3,7 @@ import axios from 'axios';
 import logo from './logo-hellowinners.png';
 import uploadFile from './js/upload'; // Importa a função de upload
 
+
 const App = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploadProgress, setUploadProgress] = useState(0);
